@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YYC Homecare Services — Care That Feels Like Family</title>
+    <meta name="description" content="Calgary's paramedic-led home care provider. 67 five-star reviews. AHS-funded options available. Personal care, nursing, dementia support, and more across Alberta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           CSS RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2A8F8F;
+            --primary-light: #E8F5F5;
+            --primary-dark: #1E6E6E;
+            --secondary: #FDF8F0;
+            --accent: #E07A5F;
+            --accent-hover: #C96A52;
+            --accent-light: #FAE8E2;
+            --neutral: #3D3D3D;
+            --neutral-light: #6B6B6B;
+            --background: #FFFDF9;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--neutral);
+            background-color: var(--background);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            color: var(--neutral);
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 96px 0;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: var(--font-sans);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+            text-decoration: none;
+            line-height: 1.4;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(224, 122, 95, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: var(--white);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(224, 122, 95, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--neutral);
+            border: 2px solid var(--neutral);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--neutral);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-white:hover {
+            color: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-sm {
+            padding: 10px 24px;
+            font-size: 14px;
+        }
+
+        /* ============================================
+           IMAGE PLACEHOLDERS
+           ============================================ */
+        .img-placeholder {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #d4ecec 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+            color: var(--primary-dark);
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px dashed rgba(42, 143, 143, 0.25);
+            border-radius: var(--radius-lg);
+            pointer-events: none;
+        }
+
+        .img-placeholder .placeholder-icon {
+            display: block;
+            font-size: 36px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        .img-placeholder .placeholder-label {
+            max-width: 220px;
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           1. TOP NOTIFICATION BAR
+           ============================================ */
+        .notification-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .notification-bar a {
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            margin-left: 4px;
+        }
+
+        .notification-bar a:hover {
+            color: var(--secondary);
+        }
+
+        /* ============================================
+           2. NAVIGATION
+           ============================================ */
+        .navbar {
+            background-color: var(--white);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 76px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo:hover {
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--neutral);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-left: 8px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--neutral);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        /* ============================================
+           3. HERO SECTION
+           ============================================ */
+        .hero {
+            padding: 80px 0 96px;
+            background: linear-gradient(180deg, var(--white) 0%, var(--secondary) 100%);
+            overflow: hidden;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            color: var(--neutral);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--neutral-light);
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            color: var(--neutral-light);
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 36px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--neutral);
+        }
+
+        .stars {
+            color: #E9A23B;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-phone {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--neutral);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-phone svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--primary);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image .img-placeholder {
+            width: 100%;
+            min-height: 480px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-image .trust-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 16px 24px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-badge .badge-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .trust-badge .badge-text strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .trust-badge .badge-text span {
+            font-size: 12px;
+            color: var(--neutral-light);
+        }
+
+        /* ============================================
+           4. WHY FAMILIES CHOOSE US
+           ============================================ */
+        .why-us {
+            padding: 96px 0;
+            background: var(--background);
+        }
+
+        .why-us .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .why-us .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .why-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .why-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-card:nth-child(1) {
+            background: linear-gradient(180deg, #F0FAFA 0%, var(--white) 40%);
+        }
+
+        .why-card:nth-child(2) {
+            background: linear-gradient(180deg, var(--secondary) 0%, var(--white) 40%);
+        }
+
+        .why-card:nth-child(3) {
+            background: linear-gradient(180deg, var(--accent-light) 0%, var(--white) 40%);
+        }
+
+        .why-card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        .why-card:nth-child(1) .why-card-icon {
+            background: var(--primary-light);
+        }
+
+        .why-card:nth-child(2) .why-card-icon {
+            background: #FFF3E0;
+        }
+
+        .why-card:nth-child(3) .why-card-icon {
+            background: var(--accent-light);
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
+        }
+
+        .why-card p {
+            color: var(--neutral-light);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           5. SERVICES SECTION
+           ============================================ */
+        .services {
+            padding: 96px 0;
+            background: var(--secondary);
+        }
+
+        .services .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .services .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .services .section-header p {
+            font-size: 18px;
+            color: var(--neutral-light);
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            margin-bottom: 72px;
+        }
+
+        .service-row:last-of-type {
+            margin-bottom: 48px;
+        }
+
+        .service-row.reversed .service-image {
+            order: 2;
+        }
+
+        .service-row.reversed .service-text {
+            order: 1;
+        }
+
+        .service-image .img-placeholder {
+            min-height: 320px;
+            border-radius: var(--radius-lg);
+        }
+
+        .service-text h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            font-family: var(--font-serif);
+        }
+
+        .service-text p {
+            color: var(--neutral-light);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-text .learn-more {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap var(--transition);
+        }
+
+        .service-text .learn-more:hover {
+            color: var(--accent-hover);
+            gap: 10px;
+        }
+
+        .services-cta {
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        .services-cta a {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap var(--transition);
+        }
+
+        .services-cta a:hover {
+            color: var(--primary-dark);
+            gap: 12px;
+        }
+
+        /* ============================================
+           6. MEET VEERPAL
+           ============================================ */
+        .meet-founder {
+            padding: 96px 0;
+            background: var(--secondary);
+        }
+
+        .founder-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .founder-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+        }
+
+        .founder-image .img-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-lg), 0 0 0 6px var(--white), 0 0 0 8px var(--primary-light);
+        }
+
+        .founder-image .img-placeholder .placeholder-label {
+            font-size: 12px;
+        }
+
+        .founder-content h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .founder-narrative {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--neutral-light);
+            max-width: 680px;
+            margin: 0 auto 28px;
+            font-style: italic;
+        }
+
+        .founder-signature {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--neutral);
+            margin-bottom: 24px;
+        }
+
+        .founder-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .founder-tag {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* ============================================
+           7. TESTIMONIALS
+           ============================================ */
+        .testimonials {
+            padding: 96px 0;
+            background: var(--background);
+            overflow: hidden;
+        }
+
+        .testimonials .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .testimonials .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 48px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 40px;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-card .card-stars {
+            color: #E9A23B;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--neutral);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-card .attribution {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .testimonials-cta {
+            text-align: center;
+        }
+
+        .testimonials-cta a {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .testimonials-cta a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ============================================
+           8. FUNDED CARE
+           ============================================ */
+        .funded-care {
+            padding: 96px 0;
+            background: linear-gradient(180deg, #EDF8F8 0%, #F5FBFB 100%);
+        }
+
+        .funded-care .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .funded-care .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .funded-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .funded-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px 36px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(42, 143, 143, 0.1);
+            transition: all var(--transition);
+        }
+
+        .funded-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .funded-card .card-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .funded-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-family: var(--font-serif);
+        }
+
+        .funded-card p {
+            color: var(--neutral-light);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .funded-care .section-cta {
+            text-align: center;
+        }
+
+        /* ============================================
+           9. SERVICE AREAS
+           ============================================ */
+        .service-areas {
+            padding: 96px 0;
+            background: var(--background);
+        }
+
+        .service-areas .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .service-areas .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .areas-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #c8e6e6 100%);
+            border-radius: var(--radius-xl);
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px dashed rgba(42, 143, 143, 0.2);
+            border-radius: var(--radius-xl);
+        }
+
+        .map-svg {
+            width: 100%;
+            max-width: 280px;
+            opacity: 0.9;
+        }
+
+        .city-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .city-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all var(--transition);
+        }
+
+        .city-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
+        }
+
+        .city-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-top: 5px;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px var(--primary-light);
+        }
+
+        .city-item strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .city-item span {
+            font-size: 13px;
+            color: var(--neutral-light);
+        }
+
+        /* ============================================
+           10. BLOG TEASER
+           ============================================ */
+        .blog-teaser {
+            padding: 96px 0;
+            background: var(--secondary);
+        }
+
+        .blog-teaser .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .blog-teaser .section-header h2 {
+            font-size: 40px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .blog-card .card-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, #c8e6e6 50%, var(--accent-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        .blog-card .card-body {
+            padding: 28px 24px;
+        }
+
+        .blog-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            font-size: 14px;
+            color: var(--neutral-light);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .blog-card .read-more {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap var(--transition);
+        }
+
+        .blog-card .read-more:hover {
+            color: var(--accent-hover);
+            gap: 10px;
+        }
+
+        /* ============================================
+           11. FINAL CTA
+           ============================================ */
+        .final-cta {
+            padding: 96px 0;
+            background: var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary), var(--accent));
+        }
+
+        .final-cta .container {
+            text-align: center;
+            max-width: 720px;
+        }
+
+        .final-cta h2 {
+            font-size: 38px;
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            color: var(--neutral-light);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .final-cta .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           12. FOOTER
+           ============================================ */
+        .footer {
+            background: var(--neutral);
+            color: rgba(255,255,255,0.85);
+            padding: 72px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+            gap: 48px;
+            margin-bottom: 56px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-family: var(--font-serif);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul a {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            transition: color var(--transition);
+        }
+
+        .footer ul a:hover {
+            color: var(--white);
+        }
+
+        .footer .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer .contact-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+        }
+
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            font-style: italic;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-image .trust-badge {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .why-cards {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+
+            .service-row {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .service-row.reversed .service-image {
+                order: 0;
+            }
+
+            .service-row.reversed .service-text {
+                order: 0;
+            }
+
+            .funded-grid {
+                grid-template-columns: 1fr;
+                max-width: 560px;
+                margin: 0 auto 48px;
+            }
+
+            .areas-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .map-placeholder {
+                min-height: 300px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin: 0 auto 48px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .notification-bar {
+                font-size: 13px;
+                padding: 8px 16px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 24px;
+                gap: 20px;
+                box-shadow: var(--shadow-lg);
+                border-top: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-cta {
+                margin-left: 0;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 48px 0 64px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-image .img-placeholder {
+                min-height: 320px;
+            }
+
+            .section-padding,
+            .why-us,
+            .services,
+            .meet-founder,
+            .testimonials,
+            .funded-care,
+            .service-areas,
+            .blog-teaser,
+            .final-cta {
+                padding: 64px 0;
+            }
+
+            .why-us .section-header h2,
+            .services .section-header h2,
+            .testimonials .section-header h2,
+            .funded-care .section-header h2,
+            .service-areas .section-header h2,
+            .blog-teaser .section-header h2,
+            .final-cta h2,
+            .founder-content h2 {
+                font-size: 30px;
+            }
+
+            .service-text h3 {
+                font-size: 24px;
+            }
+
+            .final-cta .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-rating {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .why-card {
+                padding: 32px 24px;
+            }
+
+            .funded-card {
+                padding: 32px 24px;
+            }
+
+            .founder-tags {
+                gap: 8px;
+            }
+
+            .founder-tag {
+                font-size: 12px;
+                padding: 6px 14px;
+            }
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         1. TOP NOTIFICATION BAR
+         ============================================ -->
+    <div class="notification-bar">
+        Funded by AHS? You may qualify for no-cost home care through CDHCI <a href="#funded-care">&rarr; Learn More</a>
+    </div>
+
+    <!-- ============================================
+         2. NAVIGATION
+         ============================================ -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="#" class="logo">YYC Homecare</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#funded-care">Funded Care</a></li>
+                <li><a href="#about">About Veerpal</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-cta"><a href="#contact" class="btn btn-primary btn-sm">Get a Free Consultation</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         3. HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Care That Feels Like <span>Family</span> — With the Credentials to Back It Up</h1>
+                <p class="hero-subtitle">Real Care. Real Credentials. Right at Home.</p>
+                <p class="hero-text">67 Alberta families gave us 5 stars. Your family could be next.</p>
+                <div class="hero-rating">
+                    <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span>5.0</span>
+                    <span style="color: var(--neutral-light); font-weight: 400;">(67 reviews)</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Tell Us About Your Situation</a>
+                    <a href="tel:8257600983" class="hero-phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call (825) 760-0983
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="img-placeholder" role="img" aria-label="Happy caregiver with senior client at home">
+                    <div>
+                        <span class="placeholder-icon">&#128106;</span>
+                        <span class="placeholder-label">Happy caregiver with senior client at home</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon">&#9733;</div>
+                    <div class="badge-text">
+                        <strong>67 Five-Star Reviews</strong>
+                        <span>Verified on Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         4. WHY FAMILIES CHOOSE US
+         ============================================ -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Why Families Choose Us</h2>
+            </div>
+            <div class="why-cards">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">&#9877;</div>
+                    <h3>Paramedic-Led</h3>
+                    <p>Founded by Veerpal Kaur Dhatt, a Calgary EMS Paramedic with 10+ years of frontline medical experience. Your care is backed by clinical expertise you can trust.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">&#127963;</div>
+                    <h3>Government Funded Options</h3>
+                    <p>Approved CDHCI and VIP Program provider. Eligible clients receive AHS-funded care at no direct cost. We handle the paperwork so your family can focus on what matters.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">&#9733;</div>
+                    <h3>67 Five-Star Reviews</h3>
+                    <p>Don't take our word for it. 67 Calgary and Alberta families have shared their experience on Google. The trust is real, and it's earned every single day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         5. SERVICES SECTION
+         ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>How We Help Your Family</h2>
+                <p>18 services covering everything from daily support to specialized medical care.</p>
+            </div>
+
+            <!-- Service Row 1 -->
+            <div class="service-row animate-on-scroll">
+                <div class="service-image">
+                    <div class="img-placeholder" role="img" aria-label="Caregiver assisting with personal care">
+                        <div>
+                            <span class="placeholder-icon">&#128588;</span>
+                            <span class="placeholder-label">Caregiver assisting with personal care at home</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text">
+                    <h3>Personal Care &amp; Daily Living</h3>
+                    <p>We help with the everyday essentials that keep your loved one comfortable, dignified, and supported at home. From bathing and dressing to mobility assistance, meal preparation, and light housekeeping — we're here to make each day easier.</p>
+                    <a href="#" class="learn-more">Learn More &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Service Row 2 (reversed) -->
+            <div class="service-row reversed animate-on-scroll">
+                <div class="service-image">
+                    <div class="img-placeholder" role="img" aria-label="Nurse providing medical care">
+                        <div>
+                            <span class="placeholder-icon">&#129657;</span>
+                            <span class="placeholder-label">Professional nursing and medical care in home setting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text">
+                    <h3>Medical &amp; Nursing Care</h3>
+                    <p>Clinical-grade care delivered with warmth. Our team provides wound care, medication management, chronic disease support, and post-hospital recovery care — all under the guidance of a paramedic-led leadership team.</p>
+                    <a href="#" class="learn-more">Learn More &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Service Row 3 -->
+            <div class="service-row animate-on-scroll">
+                <div class="service-image">
+                    <div class="img-placeholder" role="img" aria-label="Specialized care support">
+                        <div>
+                            <span class="placeholder-icon">&#128150;</span>
+                            <span class="placeholder-label">Compassionate specialized care and support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text">
+                    <h3>Specialized Support</h3>
+                    <p>When your family's needs go beyond the basics, we're equipped to help. Dementia and Alzheimer's care, palliative support, respite for family caregivers, postpartum assistance, and around-the-clock 24-hour care — whatever it takes.</p>
+                    <a href="#" class="learn-more">Learn More &rarr;</a>
+                </div>
+            </div>
+
+            <div class="services-cta animate-on-scroll">
+                <a href="#">Explore All 18 Services &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         6. MEET VEERPAL
+         ============================================ -->
+    <section class="meet-founder" id="about">
+        <div class="container">
+            <div class="founder-content animate-on-scroll">
+                <div class="founder-image">
+                    <div class="img-placeholder" role="img" aria-label="Veerpal Kaur Dhatt — Founder and Calgary EMS Paramedic">
+                        <div>
+                            <span class="placeholder-label">Veerpal Kaur Dhatt — Founder &amp; Calgary EMS Paramedic</span>
+                        </div>
+                    </div>
+                </div>
+                <h2>Meet the Paramedic Behind Your Care</h2>
+                <p class="founder-narrative">"I started YYC Homecare because I saw a gap between what families needed and what was available. After more than a decade working in hospitals, long-term care, and emergency medical services across Manitoba and Alberta, I knew that clinical expertise shouldn't stop at the hospital door. Every person deserves care that is informed, consistent, and deeply personal — right in the comfort of their own home."</p>
+                <p class="founder-signature">— Veerpal Kaur Dhatt, Founder</p>
+                <div class="founder-tags">
+                    <span class="founder-tag">Calgary EMS Paramedic</span>
+                    <span class="founder-tag">10+ Years Clinical</span>
+                    <span class="founder-tag">Long-Term Care &amp; Hospital Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         7. TESTIMONIALS
+         ============================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>What Families Are Saying</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">&ldquo;</div>
+                    <div class="card-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"YYC Home Care Services truly stands out because of the heart behind it. From the very first conversation, I felt listened to and genuinely cared for. They matched us with a caregiver who felt like part of our family from day one."</blockquote>
+                    <div class="attribution">— Priya S.</div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">&ldquo;</div>
+                    <div class="card-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"The caregivers are professional, compassionate, and genuinely committed to making life better for my mother. I can finally go to work without worrying. That peace of mind is priceless."</blockquote>
+                    <div class="attribution">— James R.</div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="quote-icon">&ldquo;</div>
+                    <div class="card-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Without a doubt, the best home care company in Alberta. Veerpal and her team go above and beyond every single day. You can tell this isn't just a business to them — it's a calling."</blockquote>
+                    <div class="attribution">— Maria T.</div>
+                </div>
+            </div>
+            <div class="testimonials-cta animate-on-scroll">
+                <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">See all 67 reviews on Google &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         8. FUNDED CARE
+         ============================================ -->
+    <section class="funded-care" id="funded-care">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Home Care That May Already Be Covered</h2>
+            </div>
+            <div class="funded-grid">
+                <div class="funded-card animate-on-scroll">
+                    <span class="card-badge">CDHCI Program</span>
+                    <h3>Alberta Health Services Funded Care</h3>
+                    <p>Alberta Health Services funds eligible clients through Alberta Blue Cross. No invoices. No out-of-pocket costs for approved hours. If your family qualifies, professional home care is covered — and we'll guide you through every step of the process.</p>
+                </div>
+                <div class="funded-card animate-on-scroll">
+                    <span class="card-badge">VIP Program</span>
+                    <h3>Veterans Independence Program</h3>
+                    <p>The Veterans Independence Program supports Canadian veterans with in-home care. Your service deserves support in return. We're proud to be an approved VIP provider, helping veterans maintain their independence and quality of life at home.</p>
+                </div>
+            </div>
+            <div class="section-cta animate-on-scroll">
+                <div style="text-align: center;">
+                    <a href="#contact" class="btn btn-primary">Check If You Qualify</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         9. SERVICE AREAS
+         ============================================ -->
+    <section class="service-areas" id="areas">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Caring for Alberta — From Calgary to Grande Prairie</h2>
+            </div>
+            <div class="areas-layout">
+                <div class="map-placeholder animate-on-scroll" role="img" aria-label="Map of Alberta showing YYC Homecare service areas">
+                    <!-- Stylized Alberta outline SVG -->
+                    <svg class="map-svg" viewBox="0 0 300 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Alberta outline -->
+                        <path d="M40 10 L260 10 L260 440 L40 440 L40 10 Z" fill="rgba(42,143,143,0.08)" stroke="rgba(42,143,143,0.3)" stroke-width="2" rx="8"/>
+                        <path d="M50 15 L250 15 L255 20 L258 100 L260 200 L258 300 L255 400 L250 435 L50 435 L45 400 L42 300 L40 200 L42 100 L45 20 Z" fill="rgba(42,143,143,0.12)" stroke="rgba(42,143,143,0.4)" stroke-width="1.5"/>
+
+                        <!-- City dots -->
+                        <!-- Grande Prairie -->
+                        <circle cx="90" cy="85" r="8" fill="#E07A5F" opacity="0.9"/>
+                        <circle cx="90" cy="85" r="14" fill="#E07A5F" opacity="0.15"/>
+                        <text x="108" y="90" fill="#3D3D3D" font-size="12" font-family="Inter, sans-serif" font-weight="600">Grande Prairie</text>
+
+                        <!-- Edmonton -->
+                        <circle cx="170" cy="170" r="10" fill="#2A8F8F" opacity="0.9"/>
+                        <circle cx="170" cy="170" r="16" fill="#2A8F8F" opacity="0.15"/>
+                        <text x="188" y="175" fill="#3D3D3D" font-size="12" font-family="Inter, sans-serif" font-weight="600">Edmonton</text>
+
+                        <!-- Red Deer -->
+                        <circle cx="160" cy="245" r="7" fill="#E07A5F" opacity="0.9"/>
+                        <circle cx="160" cy="245" r="13" fill="#E07A5F" opacity="0.15"/>
+                        <text x="178" y="250" fill="#3D3D3D" font-size="12" font-family="Inter, sans-serif" font-weight="600">Red Deer</text>
+
+                        <!-- Calgary -->
+                        <circle cx="155" cy="320" r="12" fill="#2A8F8F" opacity="0.9"/>
+                        <circle cx="155" cy="320" r="18" fill="#2A8F8F" opacity="0.15"/>
+                        <text x="173" y="325" fill="#3D3D3D" font-size="13" font-family="Inter, sans-serif" font-weight="700">Calgary</text>
+
+                        <!-- Lethbridge -->
+                        <circle cx="150" cy="395" r="7" fill="#E07A5F" opacity="0.9"/>
+                        <circle cx="150" cy="395" r="13" fill="#E07A5F" opacity="0.15"/>
+                        <text x="168" y="400" fill="#3D3D3D" font-size="12" font-family="Inter, sans-serif" font-weight="600">Lethbridge</text>
+
+                        <!-- Medicine Hat -->
+                        <circle cx="230" cy="380" r="7" fill="#E07A5F" opacity="0.9"/>
+                        <circle cx="230" cy="380" r="13" fill="#E07A5F" opacity="0.15"/>
+                        <text x="128" y="420" fill="#3D3D3D" font-size="11" font-family="Inter, sans-serif" font-weight="600">Medicine Hat</text>
+
+                        <!-- Connection lines -->
+                        <line x1="155" y1="320" x2="170" y2="170" stroke="rgba(42,143,143,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+                        <line x1="155" y1="320" x2="160" y2="245" stroke="rgba(42,143,143,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+                        <line x1="155" y1="320" x2="150" y2="395" stroke="rgba(42,143,143,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+                        <line x1="155" y1="320" x2="230" y2="380" stroke="rgba(42,143,143,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+                        <line x1="170" y1="170" x2="90" y2="85" stroke="rgba(42,143,143,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+
+                        <!-- ALBERTA label -->
+                        <text x="75" y="200" fill="rgba(42,143,143,0.25)" font-size="28" font-family="Source Serif 4, Georgia, serif" font-weight="700" letter-spacing="8">ALBERTA</text>
+                    </svg>
+                </div>
+                <div class="city-list">
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Calgary &amp; Surrounding Areas</strong>
+                            <span>Our home base. Comprehensive care across Calgary, Airdrie, Cochrane, Okotoks, and area.</span>
+                        </div>
+                    </div>
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Edmonton &amp; Area</strong>
+                            <span>Full-service coverage across Edmonton, Sherwood Park, St. Albert, and surrounding communities.</span>
+                        </div>
+                    </div>
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Red Deer</strong>
+                            <span>Central Alberta coverage for families in Red Deer and area.</span>
+                        </div>
+                    </div>
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Lethbridge</strong>
+                            <span>Serving southern Alberta families with the same standard of care.</span>
+                        </div>
+                    </div>
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Medicine Hat</strong>
+                            <span>Bringing professional home care to southeastern Alberta.</span>
+                        </div>
+                    </div>
+                    <div class="city-item animate-on-scroll">
+                        <div class="city-dot"></div>
+                        <div>
+                            <strong>Grande Prairie</strong>
+                            <span>Extending our reach to northwestern Alberta and the Peace Region.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         10. BLOG TEASER
+         ============================================ -->
+    <section class="blog-teaser" id="resources">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Resources for Families</h2>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card animate-on-scroll">
+                    <div class="card-image">
+                        <span>Blog Post Image</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Why Home-Based Care is Calgary's New Standard</h3>
+                        <p>More Calgary families are choosing home care over institutional settings. Here's what's driving the shift and what it means for your family.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="blog-card animate-on-scroll">
+                    <div class="card-image">
+                        <span>Blog Post Image</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Recognizing the Signs: When to Consider Home Care</h3>
+                        <p>It's not always obvious when a loved one needs extra support. These are the early signs that professional home care could help.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+                <article class="blog-card animate-on-scroll">
+                    <div class="card-image">
+                        <span>Blog Post Image</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Understanding the Veterans Independence Program</h3>
+                        <p>Canadian veterans may qualify for funded in-home care. Learn how the VIP program works and how to apply.</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         11. FINAL CTA
+         ============================================ -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Every Family's Situation is Different.<br>Let's Talk About Yours.</h2>
+            <p>A free, no-pressure consultation to understand what your family needs. Whether you're exploring options for a parent, a spouse, or yourself — we're here to listen and help.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Schedule a Consultation</a>
+                <a href="tel:8257600983" class="btn btn-outline">Call (825) 760-0983</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         12. FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div>
+                    <span class="footer-logo">YYC Homecare</span>
+                    <p>Locally owned. Alberta-focused. Not a franchise. Founded by a Calgary EMS Paramedic to deliver the kind of home care every family deserves.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services Column -->
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Nursing Care</a></li>
+                        <li><a href="#">Dementia Support</a></li>
+                        <li><a href="#">Palliative Care</a></li>
+                        <li><a href="#">Respite Care</a></li>
+                        <li><a href="#">24-Hour Care</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">CDHCI Program</a></li>
+                        <li><a href="#">Veterans (VIP)</a></li>
+                        <li><a href="#">Blog &amp; Guides</a></li>
+                        <li><a href="#">Service Areas</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>(825) 760-0983</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>info@yychomecare.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Calgary, Alberta, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 YYC Homecare Services. All rights reserved.</p>
+                <span class="footer-tagline">Locally owned. Alberta-focused. Not a franchise.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.contains('active');
+            mobileToggle.setAttribute('aria-expanded', isOpen);
+
+            // Animate hamburger to X
+            const spans = mobileToggle.querySelectorAll('span');
+            if (isOpen) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile nav when clicking a link
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                const spans = mobileToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                var target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    var navHeight = document.querySelector('.navbar').offsetHeight;
+                    var targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+                    window.scrollTo({
+                        top: targetPos,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add slight parallax to hero trust badge on scroll
+        var trustBadge = document.querySelector('.trust-badge');
+        if (trustBadge && window.innerWidth > 768) {
+            window.addEventListener('scroll', function() {
+                var scrolled = window.pageYOffset;
+                if (scrolled < 600) {
+                    trustBadge.style.transform = 'translateY(' + (scrolled * 0.08) + 'px)';
+                }
+            }, { passive: true });
+        }
+    </script>
+
+</body>
+</html>
